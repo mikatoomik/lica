@@ -11,6 +11,7 @@ body { font-family: sans-serif; }
   height: 200px;
   margin-right: 10px;
   background: var(--second-vert);
+  counter-increment: carousel-cell;
 }
 
 .carousel-cell.is-selected {
@@ -66,5 +67,6 @@ body { font-family: sans-serif; }
 .flickity-page-dots {
   display: none;
 }
+
 
 

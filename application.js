@@ -38,3 +38,6 @@ $('#inline_calendar').calendar({
 });
 
 $('.progress').progress();
+
+const cells = Array.from(document.querySelectorAll('.carousel-cell'));
+cells.forEach(cell => cell.addEventListener('change', console.log(cell.id)));
