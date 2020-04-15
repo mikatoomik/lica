@@ -39,5 +39,26 @@ $('#inline_calendar').calendar({
 
 $('.progress').progress();
 
-const cells = Array.from(document.querySelectorAll('.carousel-cell'));
-cells.forEach(cell => cell.addEventListener('change', console.log(cell.id)));
+
+var flkty = new Flickity('.main-carousel',
+  { "wrapAround": true }
+);
+
+function reveleinstruction(e) {
+  const instruction = document.querySelector(`div[data-instruction="${e}"]`);
+  instruction.classList.remove('hidden');
+  instruction.classList.add('visible');
+}
+function cacheinstruction(visible) {
+  visible.classList.remove('visible');
+  visible.classList.add('hidden');
+}
+
+flkty.on('change', function (index) {
+  const visible = document.querySelector('.visible');
+  cacheinstruction(visible);
+  reveleinstruction(index);
+});
+
+
+

@@ -2,3 +2,8 @@
   background-color:#FFF175 ;
   border: solid 8px white;
 }
+
+.hidden {
+  background-color: tomato;
+  display: none;
+}
