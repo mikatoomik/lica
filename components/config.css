@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Arial Rounded MT";
+    src: url('../assets/ArialRoundedMTBold.woff2') format('woff2'),
+        url('../assets/ArialRoundedMTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Belinda script";
+    src: url('../assets/Belindascript-script.woff2') format('woff2'),
+        url('../assets/Belindascript-script.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
   --mon-rouge: #f9747a;
   --mon-vert: #70e8cd;
@@ -12,14 +29,18 @@
   --gris-page-inactive: #9b9b9b;
 
   --police-titre: "Roboto";
-  --menu-page: "Arial Rounded MT Bold";
-  --citation: "Belinda";
+  --menu-page: "Arial Rounded MT";
+  --citation: "Belinda script";
   --inclusion: "Barlow Condensed";
+}
+
+body {
+  background: #EEE;
 }
 
 h1, h2 {
   font-size: 24px;
-  font-family: var(--police-titre);
+  font-family: var(--police-titre)
   color: var(--mon-noir-texte-titre);
 }
 

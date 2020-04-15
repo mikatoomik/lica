@@ -11,8 +11,6 @@ body { font-family: sans-serif; }
   height: 200px;
   margin-right: 10px;
   background: var(--second-vert);
-  border-radius: 5px;
-  counter-increment: carousel-cell;
 }
 
 .carousel-cell.is-selected {
@@ -20,14 +18,47 @@ body { font-family: sans-serif; }
 }
 
 /* cell number */
-.carousel-cell:before {
+.carousel-cell {
   display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
+  border: solid 8px white;
   color: white;
 }
+
+.carousel-cell .card {
+    height: 100%;
+}
+.carousel-cell .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.carousel-cell .content .meta {
+  padding: 0 5px 0 5px;
+  font-family: var(--inclusion);
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-cell .content .meta > span.right {
+  display: block;
+  text-align: right;
+}
+.carousel-cell .content .description {
+  margin-top: -19px;
+  height: 100%;
+  text-align: center;
+  font-size: 33px;
+  font-family: var(--citation);
+  transform: rotate(-7deg);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
 .flickity-button {
   display: none;
 }

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="application.js"></script>
+
 </head>
 
 <body>
@@ -39,21 +39,101 @@
       </div>
     </div>
     <div class="column progression">
-      <p>les progressions couleur</p>
-      <p></p>
+      <div class="ui four column grid">
+        <div class="column">
+          <div class="ui tiny progress" data-percent="18" id="bar1">
+            <div class="bar"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui tiny progress" data-percent="74" id="bar2">
+            <div class="bar">
+
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui tiny progress" data-percent="33" id="bar3">
+            <div class=" bar">
+
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui tiny progress" data-percent="58" id="bar4">
+            <div class="bar">
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="column caroussel">
       <!-- Flickity HTML init -->
       <div class="carousel" data-flickity='{ "wrapAround": true }'>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="content">
+              <div class="meta">
+                4/5 Jours
+                <span class="right">Instructions</span>
+              </div>
+              <div class="description">
+                <p>Si tu peux le réver<br />tu peux le faire</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="content">
+              <div class="meta">
+                4/5 Jours
+                <span class="right">Instructions</span>
+              </div>
+              <div class="description">
+                <p>Si tu peux le réver<br />tu peux le faire</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="content">
+              <div class="meta">
+                4/5 Jours
+                <span class="right">Instructions</span>
+              </div>
+              <div class="description">
+                <p>Si tu peux le réver<br />tu peux le faire</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card">
+            <div class="content">
+              <div class="meta">
+                4/5 Jours
+                <span class="right">Instructions</span>
+              </div>
+              <div class="description">
+                <p>Si tu peux le réver<br />tu peux le faire</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="column boutons">
-
+    <div class="column boutons" id="buttons">
+      <button class="small ui right labeled icon button disabled">
+        <i class="times icon"></i>
+        Abandonner
+      </button>
+      <div class="small ui right labeled icon button">
+        <i class="plus icon"></i>
+        Ajouter ma séance
+      </div>
     </div>
     <div class="column calendrier">
       <div class="ui calendar" id="inline_calendar">
@@ -71,7 +151,7 @@
   </div>
 
 
-
+  <script type="text/javascript" src="application.js"></script>
 </body>
 
 </html>

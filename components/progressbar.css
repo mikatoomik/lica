@@ -1,0 +1,33 @@
+.ui.active.progress, .ui.active.progress .bar {
+  border-radius: 0px;
+}
+
+ {
+  border-radius: 0px;
+  background-color: red;
+}
+
+
+#bar1 > div, #bar4 > div {
+  background-color: rgba(249, 116, 122, 1);
+}
+
+#bar1, #bar4 {
+  background-color: rgba(249, 116, 122, 0.3);
+}
+
+#bar2 > div {
+  background-color: rgba(253, 204, 245, 1);
+}
+#bar2 {
+  background-color:  rgba(253, 204, 245, 0.3);
+}
+
+#bar3 > div {
+  background-color: rgba(112, 232, 205, 1);
+}
+
+#bar3 {
+  background-color: rgba(112, 232, 205, 0.3);
+}
+
