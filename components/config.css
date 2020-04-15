@@ -1,0 +1,45 @@
+:root {
+  --mon-rouge: #f9747a;
+  --mon-vert: #70e8cd;
+  --mon-rose: #ffccf5;
+  --second-rouge: #f4a2a6;
+  --second-vert: #5fe6c7;
+  --mon-violet-page-active:  #734b98;
+  --mon-noir :  #383838;
+  --second-noir: #3b3c3d;
+  --noir-texte-titre : #3f2e4c;
+  --mon-gris: #6b6d6f;
+  --gris-page-inactive: #9b9b9b;
+
+  --police-titre: "Roboto";
+  --menu-page: "Arial Rounded MT Bold";
+  --citation: "Belinda";
+  --inclusion: "Barlow Condensed";
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-family: var(--police-titre);
+  color: var(--mon-noir-texte-titre);
+}
+
+.title {
+  text-align: center;
+}
+.title h1 {
+  margin: 0;
+}
+.title h2 {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.ui.secondary.pointing.menu .item {
+  font-size: 18px;
+  font-family: var(--menu-page);
+  color: var(--gris-page-inactive);
+}
+
+.ui.secondary.pointing.menu .active.item {
+    color: var(--mon-violet-page-active);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Defi_lica</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto:wght@900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/fomantic-ui@2.8.4/dist/semantic.min.css">
+  <script src="https://unpkg.com/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="application.js"></script>
+</head>
+
+<body>
+  <div class="ui one column grid container">
+    <div class="column header">
+      <div class="ui three column grid">
+        <div class="two wide column"></div>
+        <div class="twelve wide column title">
+          <h1>Daily</h1>
+          <h2>Défi</h2>
+        </div>
+        <div class="two wide column"></div>
+      </div>
+    </div>
+    <div class="column menu">
+      <div class="ui two item secondary pointing menu">
+        <a class="item active">
+          4 Défis en cours
+        </a>
+        <a class="item">
+          Choisir un défis
+        </a>
+      </div>
+    </div>
+    <div class="column progression">
+      <p>les progressions couleur</p>
+      <p></p>
+    </div>
+    <div class="column caroussel">
+      <!-- Flickity HTML init -->
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div>
+    </div>
+    <div class="column boutons">
+
+    </div>
+    <div class="column calendrier">
+      <div class="ui calendar" id="inline_calendar">
+      </div>
+    </div>
+    <div class="column instructions">
+      <div class="ui stackable three column grid">
+        <div class="column">instructions</div>
+        <div class="column">lignestext</div>
+        <div class="column">lesaviezvous</div>
+      </div>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
