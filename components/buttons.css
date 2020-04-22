@@ -7,3 +7,8 @@
   background-color: var(--mon-rouge);
   color: white;
 }
+
+#buttons .button .icon {
+  background-color: var(--mon-rouge);
+  color: white;
+}
