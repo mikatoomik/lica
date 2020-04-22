@@ -44,21 +44,21 @@ var flkty = new Flickity('.main-carousel',
   { "wrapAround": true }
 );
 
-function reveleinstruction(e) {
-  const instruction = document.querySelector(`div[data-instruction="${e}"]`);
-  instruction.classList.remove('hidden');
-  instruction.classList.add('visible');
-}
-function cacheinstruction(visible) {
-  visible.classList.remove('visible');
-  visible.classList.add('hidden');
-}
+// function reveleinstruction(e) {
+//   const instruction = document.querySelector(`div[data-instruction="${e}"]`);
+//   instruction.classList.remove('hidden');
+//   instruction.classList.add('visible');
+// }
+// function cacheinstruction(visible) {
+//   visible.classList.remove('visible');
+//   visible.classList.add('hidden');
+// }
 
-flkty.on('change', function (index) {
-  const visible = document.querySelector('.visible');
-  cacheinstruction(visible);
-  reveleinstruction(index);
-});
+// flkty.on('change', function (index) {
+//   const visible = document.querySelector('.visible');
+//   cacheinstruction(visible);
+//   reveleinstruction(index);
+// });
 
 
 

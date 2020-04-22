@@ -12,6 +12,7 @@
   <script src="https://unpkg.com/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -140,23 +141,48 @@
       </div>
     </div>
     <div class="column">
-      <div class="instructions visible" data-instruction="0">
-        <div class="ui stackable three column grid">
+      <div class="ui stackable three column grid" x-data="{
+                  defis: [
+                      {
+                          id: '1',
+                          instruction: `Imaginez que votre objectif est atteint et vivez pleinement ce moment (ce que vous voyez, entendez, ressentez, etc.).
+                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
+                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
+                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.`,
+                          link: 'https://www.famillezerodechet.com',
+                          thematique: 'confiance en soit.',
+                          niveau: 'initiation',
+                          jours: '3 j.',
+                          duree: '5 min',
+                          partage: '',
+                          question: `L'imagerie mentale est une technique
+                                      largement utilisée dans le sport de
+                                      haut niveau. elle est
+                                      redoutablement efficace.`,
+                      },
+                      {
+
+                      },
+                      {
+
+                      },
+                  ]
+              }">
+        <template x-for="defi in defis" :key="defi.id"></template>
+        <div class="containt_instruction">
           <div class="column">
             <div class="ui card instruction_yellows">
               <div class="content">
                 <i class="right floated like icon"></i>
                 <div class="header">
-                  Instructions 1
+                  Instructions
                 </div>
                 <div class="description">
-                  <p><strong>Imaginez</strong> que votre objectif est atteint et vivez pleinement ce moment (ce que vous
-                    voyez, entendez, ressentez, etc.).
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.</p>
+                  <div x-text="defi.instruction"></div>
                   <p>Voir la vidéo :</p>
-                  <a href="#">https://www.famillezerodechet.com</a>
+                  <a href="#">
+                    <div x-text="defi.link"></div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -164,15 +190,15 @@
           <div class="column">
             <div class="resume">
               <div class="ui divider"></div>
-              Thématique confiance en soit
+              Thématique <div x-text="defi.thematique"></div>
               <div class="ui divider"></div>
-              Niveau initiation
+              Niveau <div class="right floated" x-text="defi.niveau"></div>
               <div class="ui divider"></div>
-              Jours consécutifs 3j.
+              Jours consécutifs <div x-text="defi.jours"></div>
               <div class="ui divider"></div>
-              Durée 5min
+              Durée <div x-text="defi.duree"></div>
               <div class="ui divider"></div>
-              Partage du défi
+              Partage du défi <div x-text="defi.partage"></div>
               <div class="ui divider"></div>
             </div>
           </div>
@@ -181,165 +207,15 @@
               <div class="header">
                 Le saviez vous ?
               </div>
-              <p>L'imagerie mentale est une technique
-                largement utilisée dans le sport de
-                haut niveau. elle est
-                redoutablement efficace.</p>
+              <div x-text="defi.question"></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="instructions hidden" data-instruction="1">
-        <div class="ui stackable three column grid">
-          <div class="column">
-            <div class="ui card instruction_yellows">
-              <div class="content">
-                <i class="right floated like icon"></i>
-                <div class="header">
-                  Instructions 2
-                </div>
-                <div class="description">
-                  <p><strong>Imaginez</strong> que votre objectif est atteint et vivez pleinement ce moment (ce que vous
-                    voyez, entendez, ressentez, etc.).
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.</p>
-                  <p>Voir la vidéo :</p>
-                  <a href="#">https://www.famillezerodechet.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="resume">
-              <div class="ui divider"></div>
-              Thématique confiance en soit
-              <div class="ui divider"></div>
-              Niveau initiation
-              <div class="ui divider"></div>
-              Jours consécutifs 3j.
-              <div class="ui divider"></div>
-              Durée 5min
-              <div class="ui divider"></div>
-              Partage du défi
-              <div class="ui divider"></div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="question">
-              <div class="header">
-                Le saviez vous ?
-              </div>
-              <p>L'imagerie mentale est une technique
-                largement utilisée dans le sport de
-                haut niveau. elle est
-                redoutablement efficace.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="instructions hidden" data-instruction="2">
-        <div class="ui stackable three column grid">
-          <div class="column">
-            <div class="ui card instruction_yellows">
-              <div class="content">
-                <i class="right floated like icon"></i>
-                <div class="header">
-                  Instructions 3
-                </div>
-                <div class="description">
-                  <p><strong>Imaginez</strong> que votre objectif est atteint et vivez pleinement ce moment (ce que vous
-                    voyez, entendez, ressentez, etc.).
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.</p>
-                  <p>Voir la vidéo :</p>
-                  <a href="#">https://www.famillezerodechet.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="resume">
-              <div class="ui divider"></div>
-              Thématique confiance en soit
-              <div class="ui divider"></div>
-              Niveau initiation
-              <div class="ui divider"></div>
-              Jours consécutifs 3j.
-              <div class="ui divider"></div>
-              Durée 5min
-              <div class="ui divider"></div>
-              Partage du défi
-              <div class="ui divider"></div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="question">
-              <div class="header">
-                Le saviez vous ?
-              </div>
-              <p>L'imagerie mentale est une technique
-                largement utilisée dans le sport de
-                haut niveau. elle est
-                redoutablement efficace.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="instructions hidden" data-instruction="3">
-        <div class="ui stackable three column grid">
-          <div class="column">
-            <div class="ui card instruction_yellows">
-              <div class="content">
-                <i class="right floated like icon"></i>
-                <div class="header">
-                  Instructions 4
-                </div>
-                <div class="description">
-                  <p><strong>Imaginez</strong> que votre objectif est atteint et vivez pleinement ce moment (ce que vous
-                    voyez, entendez, ressentez, etc.).
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                    Vous pouvez fermer les yeux pour visualiser plus facilement la situation.</p>
-                  <p>Voir la vidéo :</p>
-                  <a href="#">https://www.famillezerodechet.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="resume">
-              <div class="ui divider"></div>
-              Thématique confiance en soit
-              <div class="ui divider"></div>
-              Niveau initiation
-              <div class="ui divider"></div>
-              Jours consécutifs 3j.
-              <div class="ui divider"></div>
-              Durée 5min
-              <div class="ui divider"></div>
-              Partage du défi
-              <div class="ui divider"></div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="question">
-              <div class="header">
-                Le saviez vous ?
-              </div>
-              <p>L'imagerie mentale est une technique
-                largement utilisée dans le sport de
-                haut niveau. elle est
-                redoutablement efficace.</p>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </div>
-
-
-    <script type="text/javascript" src="application.js"></script>
+  </div>
+  <script type="text/javascript" src="application.js"></script>
 </body>
 
 </html>
