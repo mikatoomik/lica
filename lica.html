@@ -119,7 +119,7 @@
                 <span class="right">Instructions</span>
               </div>
               <div class="description">
-                <p>Si tu peux le réver<br />tu peux le faire</p>
+                <p>Si tu peux le réver<br />tu peux tenter pour voir</p>
               </div>
             </div>
           </div>
@@ -141,7 +141,8 @@
       </div>
     </div>
     <div class="column">
-      <div class="ui stackable three column grid" x-data="{
+      <div id="init" class="ui stackable three column grid" x-data="{
+                  numbindex_numb : '1',
                   defis: [
                       {
                           id: '1',
@@ -159,63 +160,99 @@
                                       largement utilisée dans le sport de
                                       haut niveau. elle est
                                       redoutablement efficace.`,
+                          visible: true,
                       },
                       {
-
+                          id: '2',
+                          instruction: `D'autres instructions`,
+                          link: 'https://www.famillezerodechet.com',
+                          thematique: 'confiance en soit.',
+                          niveau: 'initiation',
+                          jours: '3 j.',
+                          duree: '5 min',
+                          partage: '',
+                          question: `L'imagerie mentale est une technique
+                                      largement utilisée dans le sport de
+                                      haut niveau. elle est
+                                      redoutablement efficace.`,
+                          visible: true,
                       },
                       {
-
+                          id: '3',
+                          instruction: `Dur d'inventer des phrases.`,
+                          link: 'https://www.famillezerodechet.com',
+                          thematique: 'confiance en soit.',
+                          niveau: 'initiation',
+                          jours: '3 j.',
+                          duree: '5 min',
+                          partage: '',
+                          question: `L'imagerie mentale est une technique
+                                      largement utilisée dans le sport de
+                                      haut niveau. elle est
+                                      redoutablement efficace.`,
+                          visible: true,
                       },
                   ]
               }">
-        <template x-for="defi in defis" :key="defi.id"></template>
-        <div class="containt_instruction">
-          <div class="column">
-            <div class="ui card instruction_yellows">
-              <div class="content">
-                <i class="right floated like icon"></i>
-                <div class="header">
-                  Instructions
+        <template x-for="defi in defis" :key="defi.id">
+          <div>
+            <div class="containt_instruction" x-show="defi.visible = (defi.id === numbindex_numb) ? true : false">
+              <div x-text="numbindex_numb"></div>
+              <div class=" column">
+                <div class="ui card instruction_yellows">
+                  <div class="content">
+                    <i class="right floated like icon"></i>
+                    <div class="header">
+                      Instructions
+                    </div>
+                    <div class="description">
+                      <div x-text="defi.instruction"></div>
+                      <p>Voir la vidéo :</p>
+                      <a href="#">
+                        <div x-text="defi.link"></div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="description">
-                  <div x-text="defi.instruction"></div>
-                  <p>Voir la vidéo :</p>
-                  <a href="#">
-                    <div x-text="defi.link"></div>
-                  </a>
+              </div>
+              <div class="column">
+                <div class="resume">
+                  <div class="ui divider"></div>
+                  Thématique <div x-text="defi.thematique"></div>
+                  <div class="ui divider"></div>
+                  Niveau <div class="right floated" x-text="defi.niveau"></div>
+                  <div class="ui divider"></div>
+                  Jours consécutifs <div x-text="defi.jours"></div>
+                  <div class="ui divider"></div>
+                  Durée <div x-text="defi.duree"></div>
+                  <div class="ui divider"></div>
+                  Partage du défi <div x-text="defi.partage"></div>
+                  <div class="ui divider"></div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="question">
+                  <div class="header">
+                    Le saviez vous ?
+                  </div>
+                  <div x-text="defi.question"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column">
-            <div class="resume">
-              <div class="ui divider"></div>
-              Thématique <div x-text="defi.thematique"></div>
-              <div class="ui divider"></div>
-              Niveau <div class="right floated" x-text="defi.niveau"></div>
-              <div class="ui divider"></div>
-              Jours consécutifs <div x-text="defi.jours"></div>
-              <div class="ui divider"></div>
-              Durée <div x-text="defi.duree"></div>
-              <div class="ui divider"></div>
-              Partage du défi <div x-text="defi.partage"></div>
-              <div class="ui divider"></div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="question">
-              <div class="header">
-                Le saviez vous ?
-              </div>
-              <div x-text="defi.question"></div>
-            </div>
-          </div>
-        </div>
         </template>
       </div>
     </div>
   </div>
   <script type="text/javascript" src="application.js"></script>
+  <script>
+
+    flkty.on('change', function (index) {
+      const numbindex_numb = (index + 1).toString();
+      const init = document.getElementById('init');
+      init.setAttribute('x-data', `{ numbindex_numb: '${numbindex_numb}'}`);
+    });
+  </script>
 </body>
 
 </html>

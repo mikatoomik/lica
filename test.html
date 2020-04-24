@@ -18,83 +18,15 @@
 </head>
 
 <body>
-  <div class="ui one column grid container">
 
-    <div class="column">
-      <div class="ui stackable three column grid" x-data="{
-                  defis: [
-                      {
-                          id: '1',
-                          instruction: `Imaginez que votre objectif est atteint et vivez pleinement ce moment (ce que vous voyez, entendez, ressentez, etc.).
-                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.
-                                        Vous pouvez fermer les yeux pour visualiser plus facilement la situation.`,
-                          link: 'https://www.famillezerodechet.com',
-                          thematique: 'confiance en soit.',
-                          niveau: 'initiation',
-                          jours: '3 j.',
-                          duree: '5 min',
-                          partage: '',
-                          question: `L'imagerie mentale est une technique
-                                      largement utilisée dans le sport de
-                                      haut niveau. elle est
-                                      redoutablement efficace.`,
-                      },
-                      {
-                          id: '2',
-                          instruction: `D'autres instructions`,
-                          link: 'https://www.famillezerodechet.com',
-                          thematique: 'confiance en soit.',
-                          niveau: 'initiation',
-                          jours: '3 j.',
-                          duree: '5 min',
-                          partage: '',
-                          question: `L'imagerie mentale est une technique
-                                      largement utilisée dans le sport de
-                                      haut niveau. elle est
-                                      redoutablement efficace.`,
-                      },
-                      {
-                          id: '3',
-                          instruction: `Dur d'inventer des phrases.`,
-                          link: 'https://www.famillezerodechet.com',
-                          thematique: 'confiance en soit.',
-                          niveau: 'initiation',
-                          jours: '3 j.',
-                          duree: '5 min',
-                          partage: '',
-                          question: `L'imagerie mentale est une technique
-                                      largement utilisée dans le sport de
-                                      haut niveau. elle est
-                                      redoutablement efficace.`,
-                      },
-                  ]
-              }">
-        <template x-for="defi in defis" :key="defi.id"></template>
-        <div class="for_contrainer">
-          <div class="column" x-show="id == '2'">
-            <div class="ui card instruction_yellows">
-              <div class="content">
-                <i class="right floated like icon"></i>
-                <div class="header">
-                  Instructions
-                </div>
-                <div class="description">
-                  <div x-text="defi.instruction"></div>
-                  <p>Voir la vidéo :</p>
-                  <a href="#">
-                    <div x-text="defi.link"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </template>
-      </div>
-    </div>
+  <div x-data="{ fruit: 'apple' }">
+    <button x-on:click="
+            fruit = 'pear';
+            $nextTick(() => { console.log($event.target.innerText) });
+        " x-text="fruit"></button>
   </div>
-  <script type="text/javascript" src="application.js"></script>
+
+
 </body>
 
 </html>

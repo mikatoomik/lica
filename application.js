@@ -55,9 +55,12 @@ var flkty = new Flickity('.main-carousel',
 // }
 
 // flkty.on('change', function (index) {
-//   const visible = document.querySelector('.visible');
-//   cacheinstruction(visible);
-//   reveleinstruction(index);
+//   //  const visible = document.querySelector('.visible');
+//   //  cacheinstruction(visible);
+//   //  reveleinstruction(index);
+//   console.log(index);
+//   const numb = index;
+//   console.log(numb);
 // });
 
 
